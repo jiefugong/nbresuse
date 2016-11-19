@@ -11,7 +11,7 @@ def get_metrics():
     return {
         'rss': rss,
         'limits': {
-            'memory': 999
+            'memory': int(os.environ.get('MEM_LIMIT', None))
         }
     }
 

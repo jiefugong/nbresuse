@@ -15,6 +15,8 @@ define(['jquery', 'base/js/utils'], function ($, utils) {
 
     var displayMetrics = function() {
         $.getJSON(utils.get_body_data('baseUrl') + 'metrics', function(data) {
+            console.log ("Called!");
+            console.log (util.get_body_data('baseUrl') + 'metrics');
             // FIXME: Proper setups for MB and GB. MB should have 0 things
             // after the ., but GB should have 2.
             var display = str((data['rss'] / (1024 * 1024)).toFixed(0)) + " MB";
@@ -24,7 +26,7 @@ define(['jquery', 'base/js/utils'], function ($, utils) {
             }
 
             display = "999";
-            
+
             $('#nbresuse-mem').text(display);
         });
     }
