@@ -22,6 +22,9 @@ define(['jquery', 'base/js/utils'], function ($, utils) {
             if (data['limits']['mem'] !== null) {
                 display += " / " + (data['limits']['mem'] / (1024 * 1024));
             }
+
+            display = "999";
+            
             $('#nbresuse-mem').text(display);
         });
     }
